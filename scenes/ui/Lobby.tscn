@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/ui/Lobby.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/LobbyPlayer.tscn" type="PackedScene" id=2]
+
+[node name="Lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+lobby_grid_path = NodePath("MarginContainer/PlayersGrid")
+lobby_player_scene = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayersGrid" type="GridContainer" parent="MarginContainer"]
+margin_right = 944.0
+margin_bottom = 520.0
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}

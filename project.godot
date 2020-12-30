@@ -22,7 +22,9 @@ config/icon="res://icon.png"
 [autoload]
 
 Lobby="*res://scripts/singletons/Lobby.gd"
+Signals="*res://scripts/singletons/Signals.gd"
 
 [rendering]
 
+environment/default_clear_color=Color( 0.290196, 0.290196, 0.290196, 1 )
 environment/default_environment="res://default_env.tres"

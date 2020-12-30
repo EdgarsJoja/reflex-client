@@ -1,8 +1,5 @@
 extends Control
 
-export(NodePath) var server_path
-onready var server = get_node(server_path)
-
 export(NodePath) var lobby_grid_path
 onready var lobby_grid: GridContainer = get_node(lobby_grid_path)
 
@@ -10,11 +7,10 @@ export(PackedScene) var lobby_player_scene: PackedScene
 
 
 func _ready():
-	server.connect('update_lobby', self, 'update_lobby')
+	Lobby.connect('update_lobby', self, 'update_lobby')
 
 
 func update_lobby(value):
-	Lobby.set_players(value);
 	create_lobby_players_ui(value)
 
 
